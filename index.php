@@ -1,14 +1,18 @@
 <?php
 
+use Study\Controller\GradeController;
+use Study\Controller\StudentController;
 use Study\Controller\SubjectController;
 use Study\Controller\UserController;
 
 require __DIR__ . "/vendor/autoload.php";
-if (!isset($_SESSION['isLogin']) || !$_SESSION['isLogin']) {
-    header('location:src/View/tbl_users/login.php');
-}
+// if (!isset($_SESSION['isLogin']) || !$_SESSION['isLogin']) {
+//     header('location:src/View/tbl_users/login.php');
+// }
 $subjectController = new SubjectController();
 $userController = new UserController();
+$studentController = new StudentController();
+$gradeController = new GradeController();
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 include_once('src/View/menu/menu.php');
 ?>
@@ -41,12 +45,30 @@ include_once('src/View/menu/menu.php');
         case 'delete-subject':
             $subjectController->deleteSubject();
             break;
-        case 'logOut':
-            include_once('src/View/tbl_users/login.php');
+        case 'list-student':
+            $studentController->viewStudent();
             break;
-        case 'register':
-            $userController->register();
+        case 'add-student':
+            $studentController->addStudent();
             break;
+        case 'list-grade':
+            $gradeController->viewGrade();
+            break;
+        case 'add-grade':
+            $gradeController->addGrade();
+            break;
+        case 'update-grade':
+            $gradeController->updateGrade();
+            break;
+        case 'delete-grade':
+            $gradeController->deleteGrade();
+            break;
+            // case 'logOut':
+            //     include_once('src/View/tbl_users/login.php');
+            //     break;
+            // case 'register':
+            //     include_once('src/View/tbl_users/register.php');
+            //     break;
         default:
             $subjectController->viewSubject();
     }

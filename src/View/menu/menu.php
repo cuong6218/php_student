@@ -14,10 +14,10 @@
                 <a class="nav-link" href="index.php?page=list-subject">List Subject</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">List Grade</a>
+                <a class="nav-link" href="index.php?page=list-grade">List Grade</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">List Student</a>
+                <a class="nav-link" href="index.php?page=list-student">List Student</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?page=logOut">Log out</a>

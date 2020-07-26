@@ -14,7 +14,7 @@
             <a href="login.php"><i class="fa fa-arrow-left"></i></a>
         </div>
         <p class="h2 text-center">Register</p>
-        <form method="post">
+        <form action="" method="post">
             <div class="form-group">
                 <label>Full Name:</label>
                 <input class="form-control" type="text" name="fullname" required placeholder="Enter Your Full Name" />
@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label>Username:</label>
-                <input class="form-control" type="text" name="username" required placeholder="Enter Your username" />
+                <input class="form-control" type="username" name="username" required placeholder="Enter Your Username" />
                 <span class="Error"></span>
             </div>
             <div class="form-group">
@@ -31,7 +31,7 @@
                 <span class="Error"></span>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">Register</button>
+                <input class="btn btn-primary btn-block" type="submit" value="Register" />
             </div>
         </form>
     </div>
@@ -41,3 +41,81 @@
 </body>
 
 </html>
+<style>
+    /* Copy this code in your css file. */
+
+    html,
+    body {
+        width: 500px;
+        margin: auto;
+    }
+
+    .container {
+        width: 500px;
+        margin: 20px auto;
+    }
+
+    .preview {
+        padding: 10px;
+        position: relative;
+    }
+
+    .preview i {
+        color: white;
+        font-size: 35px;
+        transform: translate(50px, 130px);
+    }
+
+    .preview-img {
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .browse-button {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        position: absolute;
+        /* Tweak the position property if the element seems to be unfit */
+        top: 10px;
+        left: 132px;
+        background: linear-gradient(180deg, transparent, black);
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .browse-button:hover {
+        opacity: 1;
+    }
+
+    .browse-input {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        transform: translate(-1px, -26px);
+        opacity: 0;
+    }
+
+    .form-group {
+        width: 250px;
+        margin: 10px auto;
+    }
+
+    .form-group input {
+        transition: 0.3s linear;
+    }
+
+    .form-group input:focus {
+        border: 1px solid crimson;
+        box-shadow: 0 0 0 0;
+    }
+
+    .Error {
+        color: crimson;
+        font-size: 13px;
+    }
+
+    .Back {
+        font-size: 25px;
+    }
+</style>
